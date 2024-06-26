@@ -1,11 +1,23 @@
-import React from 'react';
+import React from "react";
+
+// import SignIn from "./components/auth/SignIn";
+// import SignUp from "./components/auth/SignUp";
+import TopBar from "./components/TopBar";
+import Navbar from "./components/Navbar";
+// import Carousel from "./components/Home/Slider";
+import HomePage from "./components/Home/Page";
 
 function App() {
   return (
     <React.Fragment>
-      <div className='flex w-[100vw] h-[100vh] justify-center items-center bg-black text-yellow-300 text-6xl'>
-        <h1 className='font-bold '>Hello world!</h1>
+      <TopBar />
+      <Navbar />
+      <div className="">
+        <HomePage />
       </div>
+
+      {/* <SignIn/> */}
+      {/* <SignUp/> */}
     </React.Fragment>
   );
 }
