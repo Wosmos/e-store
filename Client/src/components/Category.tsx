@@ -23,7 +23,7 @@ const Category = () => {
               &rarr;
             </span>
           </a>
-          <hr className="mt-[1px] h-[1px] w-20 bg-[#F2F4F6] opacity-100 md:mt-[1.5px] md:h-[2px]" />
+          <hr className="mt-[1px] h-[1px] w-20 bg-[#000000] md:mt-[1.5px] md:h-[2px]" />
         </div>
       </div>
 
@@ -54,7 +54,7 @@ const Category = () => {
       </div>
       {/* 3rd box */}
       <div
-        className="flex flex-col justify-end gap-3 bg-[#F2F4F6] p-8 md:p-12 bg-cover bg-center"
+        className="flex flex-col justify-end gap-3 bg-[#F2F4F6] bg-cover bg-center p-8 md:p-12"
         style={{
           backgroundImage:
             "url(https://images.pexels.com/photos/4352247/pexels-photo-4352247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)",
@@ -73,7 +73,7 @@ const Category = () => {
               &rarr;
             </span>
           </a>
-          <hr className="mt-[1px] h-[1px] w-20 bg-[#000000] opacity-100 md:mt-[1.5px] md:h-[2px]" />
+          <hr className="mt-[1px] h-[2px] w-20 bg-[#000000] opacity-100 md:mt-[1.5px]" />
         </div>
       </div>
     </section>

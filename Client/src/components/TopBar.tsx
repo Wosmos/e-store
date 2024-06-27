@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IoMdClose } from "react-icons/io"; // Import the close icon
+import { IoMdClose } from "react-icons/io"; 
 import Img from "../assets/SaleTicket.png";
 
 const TopBar = () => {
@@ -31,7 +31,7 @@ const TopBar = () => {
                 &rarr;
               </span>
             </a>
-            <hr className="mt-[1px] md:mt-[1.5px] h-[1px] md:h-[2px] bg-[#377dff] opacity-100" />
+            <hr className="mt-[1px] md:mt-[1.5px] h-[2px] bg-[#377dff] opacity-100" />
           </div>
           <button
             onClick={handleClose}

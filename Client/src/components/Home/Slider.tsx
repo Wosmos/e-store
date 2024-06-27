@@ -77,9 +77,9 @@ const Carousel = () => {
         className="group absolute start-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
         onClick={prevSlide}
       >
-        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 group-hover:bg-gray-300 group-focus:outline-none group-focus:ring-4 group-focus:ring-white">
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 group-hover:bg-gray-300 group-focus:outline-none">
           <IoMdArrowBack className="m-2 text-[18px] text-black" />
-          <span className="sr-only">Previous</span>
+          
         </span>
       </button>
       <button
@@ -87,9 +87,9 @@ const Carousel = () => {
         className="group absolute end-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
         onClick={nextSlide}
       >
-        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 group-hover:bg-gray-300 group-focus:outline-none group-focus:ring-4 group-focus:ring-white">
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 group-hover:bg-gray-300 group-focus:outline-none ">
           <IoMdArrowForward className="m-2 text-[18px]" />
-          <span className="sr-only">Next</span>
+         
         </span>
       </button>
     </div>

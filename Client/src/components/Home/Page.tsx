@@ -3,7 +3,16 @@ import Carousel from "./Slider";
 import Category from "../Category";
 import Feature from "../Cards/Feature";
 
+import SaleBanner from "./SaleBanner";
+
+import ProductSlider from "../ProductSection";
+import ArticleGrid from "../ArticleGrid";
+import CallToAction from "../CallToAction";
+import Footer from "../Footer";
+// import Article from "../Cards/Article";
+
 const HomePage = () => {
+  
   return (
     <React.Fragment>
       <Carousel />
@@ -18,7 +27,15 @@ const HomePage = () => {
         </p>
       </main>
       <Category />
-      <Feature/>
+      <Feature />
+      
+      <section className="flex flex-wrap gap-4">
+        <ProductSlider />
+      </section>
+      <ArticleGrid articles={[]}/>
+      <SaleBanner />
+      <CallToAction/>
+      <Footer/>
     </React.Fragment>
   );
 };

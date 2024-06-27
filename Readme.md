@@ -21,4 +21,6 @@ npm install express mongoose dotenv @types/express @types/mongoose @types/node t
 - [] Client Server conntection
 - [] setup client with react router
 - [] hooks(usestate, useeffect , useReducer(only basics))
-- [] Design Landing page
+- [] Design to code Home Page
+- [] More about react router
+
