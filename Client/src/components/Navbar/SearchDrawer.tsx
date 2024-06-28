@@ -24,13 +24,16 @@ const SearchDrawer: React.FC<SearchDrawerProps> = ({
 
   return (
     <div
-      className={`fixed inset-y-0 left-0 z-50 w-full transform bg-white backdrop-blur-lg p-10 pt-12 shadow-lg transition-transform duration-300 ease-in-out ${
+      className={`fixed inset-y-0 left-0 z-50 w-full transform bg-white p-10 pt-12 shadow-lg backdrop-blur-lg transition-transform duration-300 ease-in-out ${
         isOpen ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="flex justify-between">
         <h1 className="flex font-poppins text-[24px] font-medium leading-[1]">
-          Search
+          3legant
+          <span className="ml-[2px] inline-block h-1 w-1 animate-bounce rounded-full font-poppins text-xl font-bold text-[#6c7275]">
+            .
+          </span>
         </h1>
         <button
           className="text-[14px] font-medium text-[#6c7275]"

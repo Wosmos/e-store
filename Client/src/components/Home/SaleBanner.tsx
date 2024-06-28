@@ -10,7 +10,7 @@ const SaleBanner = () => {
           className="h-full w-full object-cover object-center "
         />
       </div>
-      <div className="flex w-full flex-col justify-center text-left gap-4 bg-[#f3f5f7] px-[32px] md:px-[72px] md:w-1/2">
+      <div className="flex w-full flex-col justify-center text-left gap-4 bg-[#f3f5f7] px-[32px] md:px-[72px] md:w-1/2 pb-16">
         <h2 className="mt-12 md:mt-0 font-inter text-[16px] font-bold leading-[1] text-[#377dff]">
           SALE UP TO 35% OFF
         </h2>

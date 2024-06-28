@@ -51,15 +51,11 @@ const CartDrawer: React.FC<CartDrawerProps> = ({
         </button>
       </div>
 
-      <div className="mt-6 space-y-4">
+      <div className="mt-6 max-h-[calc(100vh-200px)] space-y-4 overflow-y-auto">
         {cartItems.map((item) => (
           <CartCard
             key={item.id}
-            id={item.id}
-            name={item.name}
-            price={item.price}
-            quantity={item.quantity}
-            image={item.image}
+            {...item}
             incrementQuantity={incrementQuantity}
             decrementQuantity={decrementQuantity}
             removeItem={removeItem}

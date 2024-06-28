@@ -37,8 +37,8 @@ const articles: ArticleProps[] = [
 
 const ArticleGrid: React.FC<ArticleGridProps> = () => {
   return (
-    <React.Fragment>
-      <div className="mb-[40px] mt-40 flex w-full flex-row items-center justify-between md:mt-[80px]">
+    <section className="mb-20 ">
+      <div className=" mb-[40px] mt-40 flex w-full flex-row items-center justify-between md:mt-[80px] ">
         <h1 className="font-poppins text-[34px] font-[500] leading-[1.1] text-[#000] md:text-[40px]">
           Articles
         </h1>
@@ -61,7 +61,7 @@ const ArticleGrid: React.FC<ArticleGridProps> = () => {
           <Article key={index} {...article} />
         ))}
       </div>
-    </React.Fragment>
+    </section>
   );
 };
 

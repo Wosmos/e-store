@@ -24,34 +24,34 @@ const CartCard: React.FC<CartCardProps> = ({
   removeItem,
 }) => {
   return (
-    <div className="flex items-center justify-between border-b pb-4">
-      <div className="flex items-center space-x-4">
+    <div className="flex items-center justify-between border-b  py-4">
+      <div className="flex items-center">
         <img src={image} alt={name} className="h-16 w-16 object-cover" />
-        <div>
-          <h3 className="font-medium">{name}</h3>
+        <div className="ml-4">
+          <h3 className="text-sm font-medium">{name}</h3>
           <p className="text-sm text-gray-500">${price.toFixed(2)}</p>
+          <div className="mt-1 flex items-center border border-gray-200 rounded-md ">
+            <button
+              onClick={() => decrementQuantity(id)}
+              className=" px-2 py-1 text-sm"
+            >
+              -
+            </button>
+            <span className="mx-2 text-sm">{quantity}</span>
+            <button
+              onClick={() => incrementQuantity(id)}
+              className=" px-2 py-1 text-sm"
+            >
+              +
+            </button>
+          </div>
         </div>
-      </div>
-      <div className="flex items-center space-x-2">
-        <button
-          onClick={() => decrementQuantity(id)}
-          className="rounded-full bg-gray-200 px-2 py-1 text-sm"
-        >
-          -
-        </button>
-        <span>{quantity}</span>
-        <button
-          onClick={() => incrementQuantity(id)}
-          className="rounded-full bg-gray-200 px-2 py-1 text-sm"
-        >
-          +
-        </button>
       </div>
       <button
         onClick={() => removeItem(id)}
-        className="ml-4 text-red-500 hover:text-red-700"
+        className="text-gray-500 hover:text-red-500"
       >
-        <IoMdClose className="h-6 w-6" />
+        <IoMdClose className="h-5 w-5" />
       </button>
     </div>
   );

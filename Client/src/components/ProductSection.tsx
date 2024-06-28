@@ -133,7 +133,7 @@ const ProductSlider: React.FC = () => {
 
   return (
     <React.Fragment>
-      <div className=" mb-[40px] mt-40 flex w-full flex-row items-center justify-between md:mt-[80px]">
+      <div className="px-4 mb-[40px] mt-40 flex w-full flex-row items-center justify-between md:mt-[80px]">
         <h1 className="font-poppins text-[34px] font-[500] leading-[1.1] text-[#000] md:text-[40px]">
           New <br /> Arivals
         </h1>

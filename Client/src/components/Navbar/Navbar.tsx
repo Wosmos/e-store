@@ -7,7 +7,8 @@ import MenuDrawer from "./MenuDrawer";
 import CartDrawer from "./CartDrawer";
 import ProfileDrawer from "./ProfileDrawer";
 import SearchDrawer from "./SearchDrawer";
-
+import { IoLogInOutline } from "react-icons/io5";
+import img from "../../assets/Top.png"
 interface CartItem {
   id: number;
   name: string;
@@ -49,14 +50,14 @@ const Navbar: React.FC = () => {
       name: "Product 1",
       price: 19.99,
       quantity: 2,
-      image: "product1.jpg",
+      image: img,
     },
     {
       id: 2,
       name: "Product 2",
       price: 29.99,
       quantity: 1,
-      image: "product2.jpg",
+      image: img,
     },
   ]);
 
@@ -88,10 +89,14 @@ const Navbar: React.FC = () => {
     );
   };
 
+  const removeItem = (id: number) => {
+    setCartItems((items) => items.filter((item) => item.id !== id));
+  };
+
   return (
     <>
       <section className="fixed left-0 z-50 w-full bg-white shadow-sm">
-        <div className="flex h-12 w-full flex-row items-center justify-between px-4">
+        <div className="flex h-12 w-full flex-row items-center justify-between px-6 md:px-8">
           <h1 className="flex font-poppins text-[24px] font-medium leading-[1]">
             <LuMenu
               className="mr-1 cursor-pointer md:hidden"
@@ -149,12 +154,7 @@ const Navbar: React.FC = () => {
                 </ul>
               </>
             ) : (
-              <button
-                onClick={handleLogin}
-                className="rounded-lg bg-[#141718] px-4 py-2 text-sm leading-[1.63] text-white shadow-lg transition-transform hover:scale-105 hover:bg-[#38cb89]"
-              >
-                Sign Up
-              </button>
+              <IoLogInOutline className="h-8 w-8 -ml-2 cursor-pointer" onClick={handleLogin} />
             )}
           </nav>
         </div>
@@ -174,12 +174,12 @@ const Navbar: React.FC = () => {
         navItems={navItems}
       />
       <CartDrawer
-      
         isOpen={cartOpen}
         onClose={toggleCart}
         cartItems={cartItems}
         incrementQuantity={incrementQuantity}
         decrementQuantity={decrementQuantity}
+        removeItem={removeItem}
       />
       {isLoggedIn && (
         <ProfileDrawer
