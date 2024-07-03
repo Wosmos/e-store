@@ -1,44 +1,13 @@
 // src/ArticleGrid.tsx
 import React from "react";
-import Article, { ArticleProps } from "./Cards/Article";
-
-import productBackgroundImage from "../assets/Top.png";
-
-interface ArticleGridProps {
-  articles: ArticleProps[];
-}
-
-const articles: ArticleProps[] = [
-  {
-    imageSrc:  productBackgroundImage , 
-    imageAlt: "Article 1",
-    title: "Article 1 Title",
-    linkText: "Read More",
-    linkHref: "/article1",
-  },
-  {
-    imageSrc:  productBackgroundImage , 
-    imageAlt: "Article 2",
-    title: "Article 2 Title",
-
-    linkText: "Read More",
-    linkHref: "/article2",
-  },
-  {
-    imageSrc: productBackgroundImage , 
-    imageAlt: "Article 2",
-    title: "Article 2 Title",
-
-    linkText: "Read More",
-    linkHref: "/article2",
-  },
-  // Add more articles as needed
-];
+import Article from "./Cards/Article";
+import { articles } from "../constants/data";
+import { ArticleGridProps } from "../constants/interfaces";
 
 const ArticleGrid: React.FC<ArticleGridProps> = () => {
   return (
-    <section className="mb-20 ">
-      <div className=" mb-[40px] mt-40 flex w-full flex-row items-center justify-between md:mt-[80px] ">
+    <section className="mb-20">
+      <div className="mb-[40px] mt-40 flex w-full flex-row items-center justify-between md:mt-[80px]">
         <h1 className="font-poppins text-[34px] font-[500] leading-[1.1] text-[#000] md:text-[40px]">
           Articles
         </h1>
@@ -52,11 +21,11 @@ const ArticleGrid: React.FC<ArticleGridProps> = () => {
               &rarr;
             </span>
           </a>
-          <hr className="mt-[1px]  w-28 bg-[#141718] md:mt-[1.5px] h-[2px]" />
+          <hr className="mt-[1px] h-[2px] w-28 bg-[#141718] md:mt-[1.5px]" />
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-3 gap-y-6">
+      <div className="grid grid-cols-1 gap-8 gap-y-6 md:grid-cols-3">
         {articles.map((article, index) => (
           <Article key={index} {...article} />
         ))}

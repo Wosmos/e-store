@@ -5,7 +5,7 @@ import React from "react";
 import TopBar from "./components/TopBar";
 import Navbar from "./components/Navbar/Navbar";
 // import Carousel from "./components/Home/Slider";
-import HomePage from "./components/Home/Page";
+import HomePage from "./Pages/Home/Page";
 
 function App() {
   return (
