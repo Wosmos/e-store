@@ -1,34 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
-
+import {slides} from "../../constants/data";
 
 const Carousel = () => {
-  const slides = [
-    "https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    "https://images.pexels.com/photos/220749/pexels-photo-220749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  ];
 
   const [activeSlide, setActiveSlide] = useState(0);
   const totalSlides = slides.length;
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setActiveSlide((prev) => (prev + 1) % totalSlides);
-  };
+  }, [totalSlides]);
 
   const prevSlide = () => {
     setActiveSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
   };
 
-  const goToSlide = (index: React.SetStateAction<number>) => {
+  const goToSlide = (index: number) => {
     setActiveSlide(index);
   };
 
   useEffect(() => {
     const interval = setInterval(nextSlide, 5000); // Auto-slide every 5 seconds
     return () => clearInterval(interval);
-  }, [nextSlide]);
+  }, [nextSlide, totalSlides]);
 
   return (
     <div

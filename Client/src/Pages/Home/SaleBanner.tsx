@@ -11,7 +11,7 @@ const SaleBanner: React.FC<SaleBannerProps> = ({
   discountPercentage,
   linkText,
   linkHref,
-}) => {
+}) : JSX.Element => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,

@@ -11,7 +11,7 @@ import {
   FeatureProps,
   MainSectionProps,
   ProductData,
-  BannerProps,
+  SaleBannerProps,
 } from "../constants/interfaces";
 import BannerImg from "../assets/Banner.png";
 import productBackgroundImage from "../assets/Top.png";
@@ -170,7 +170,7 @@ export const mainSectionData: MainSectionProps = {
     "is a gift & decorations store based in HCMC, Vietnam. Est since 2019.",
 };
 
-export const saleBannerData: BannerProps = {
+export const saleBannerData: SaleBannerProps = {
   saleEndDate: "2024-07-31T23:59:59",
   bannerImage: BannerImg,
   promotionText: "Promotion",

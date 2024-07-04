@@ -1,10 +1,6 @@
 import React from 'react';
 
-interface CategoryItemProps {
-  title: string;
-  backgroundImage: string;
-  className?: string;
-}
+import {CategoryItemProps} from "../constants/interfaces"
 
 const CategoryItem: React.FC<CategoryItemProps> = ({ title, backgroundImage, className }) => {
   return (

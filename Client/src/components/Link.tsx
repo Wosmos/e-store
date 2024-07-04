@@ -1,13 +1,7 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 
-interface LinkWithArrowProps {
-  text: string;
-  href: string;
-  textColor?: string;
-  lineColor?: string;
-  arrowDirection?: "left" | "right";
-}
+import {LinkWithArrowProps } from "../constants/interfaces";
 
 const LinkWithArrow: React.FC<LinkWithArrowProps> = ({
   text,

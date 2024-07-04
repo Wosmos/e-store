@@ -12,7 +12,7 @@ import Practice from "../../components/practice";
 import bannerImage from "../../assets/Banner.png";
 // import Article from "../Cards/Article";
 
-const HomePage = () => {
+const HomePage: React.FC = (): JSX.Element  => {
   return (
     <React.Fragment>
       <Carousel />

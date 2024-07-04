@@ -1,7 +1,7 @@
 import React from "react";
 
 import { FeatureProps } from "../../constants/interfaces";
-import { features } from "../../constants/data";
+import { contact } from "../../constants/data";
 
 const Feature: React.FC<FeatureProps> = ({ icon, title, description }) => (
   <div className="flex flex-col items-start justify-center gap-2 bg-[#f3f5f7] p-6 transition-shadow duration-300 ease-in-out">
@@ -17,8 +17,8 @@ const Feature: React.FC<FeatureProps> = ({ icon, title, description }) => (
 
 const FeatureSection: React.FC = () => {
   return (
-    <section className="my-12 grid w-full grid-cols-2 gap-4 md:grid-cols-4">
-      {features.map((feature, index) => (
+    <section className="my-12 grid w-full grid-cols-1 gap-4 md:grid-cols-3">
+      {contact.map((feature, index) => (
         <Feature key={index} {...feature} />
       ))}
     </section>

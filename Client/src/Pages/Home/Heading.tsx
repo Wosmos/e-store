@@ -1,18 +1,14 @@
 import React from "react";
 
-interface MainSectionProps {
-  heading: string;
-  subheading: string;
-  description: string;
-  highlight: string;
-}
+import {MainSectionProps} from "../../constants/interfaces";
+
 
 const MainSection: React.FC<MainSectionProps> = ({
   heading,
   subheading,
   description,
   highlight,
-}) => {
+}): JSX.Element => {
   return (
     <main className="mt-6 flex flex-col items-center justify-between md:flex-row">
       <h1 className="text-left font-poppins font-[500] text-[48px] leading-[1.1] text-[#141718] md:text-[72px] md:leading-[1.06]">
