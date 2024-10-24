@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
 import {slides} from "../../constants/data";
 
-const Carousel = () => {
+const Carousel: React.FC  = (): JSX.Element  => {
 
   const [activeSlide, setActiveSlide] = useState(0);
   const totalSlides = slides.length;

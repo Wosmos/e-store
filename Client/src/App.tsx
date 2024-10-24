@@ -5,9 +5,11 @@ import React from "react";
 import TopBar from "./components/TopBar";
 import Navbar from "./components/Navbar/Navbar";
 // import Carousel from "./components/Home/Slider";
+// import HomePage from "./Pages/Home/Page";
+import NotFound from "./Pages/NotFount/Page";
 import HomePage from "./Pages/Home/Page";
 
-function App() {
+const App: React.FC = (): JSX.Element => {
   return (
     <React.Fragment>
       <TopBar />
@@ -15,11 +17,11 @@ function App() {
       <div className="">
         <HomePage />
       </div>
-
-      {/* <SignIn/> */}
-      {/* <SignUp/> */}
+      {/* <NotFound /> */}
     </React.Fragment>
   );
-}
+};
 
 export default App;
+
+    

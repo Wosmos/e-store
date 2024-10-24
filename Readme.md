@@ -43,3 +43,29 @@ npm install express mongoose dotenv @types/express @types/mongoose @types/node t
 -   [] contact us (optional)
 -   [] setup redux/tool kit (optional)
 -   [] refactor each component in tsx from pure jsx code (optional)
+
+
+--------------------------------x
+Expense Tracker                 |
+Personal Portfolio ---          |
+Daily Journal Email             |
+Flashcard App                   |
+URL Shortener                   |
+Pomodoro Timer                  |
+Recipe Finder                   |
+Password Manager                |
+Calculator (lol)                |
+--------------------------------x
+
+
+Chat Application
+Quote Generator (Images)
+Discord Bot
+Make a Video Game
+Web Scraper
+RNG Website
+Typing Speed Test
+ChatGPT Clone
+Virtual Tamagotchi
+Visualize a Dataset
+Yard Sale Flipper

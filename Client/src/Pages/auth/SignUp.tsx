@@ -2,21 +2,18 @@ import { useState } from "react";
 import Img from "../../assets/Top.png";
 import { HiOutlineEye, HiOutlineEyeOff } from "react-icons/hi"; // Import icons from react-icons
 
-/**color used
- * #38cb89
- *
- *
- *
- *
- * **/
 
-const SignIn = () => {
+//color used #38cb89
+
+
+const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false); // State to manage password visibility
   const [isFocused, setIsFocused] = useState(false); // State to manage input focus
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword); // Toggle showPassword state
   };
+  
 
   const handleInputFocus = () => {
     setIsFocused(true); // Set input focus state to true
@@ -28,10 +25,10 @@ const SignIn = () => {
     <section className="flex h-[100vh] w-full flex-col bg-white md:flex-row">
       {/* left side */}
 
-      <p className="font-poppins absolute top-8 w-full text-center text-[24px] font-medium leading-[1] sm:w-1/2">
+      <h1 className="absolute top-8 w-full text-center font-poppins text-[24px] font-medium leading-[1] sm:w-1/2">
         3legant
-        <span className="text-[#6c7275]">.</span>
-      </p>
+        <span className="ml-[2px] inline-block h-1 w-1 animate-bounce rounded-full bg-[#6c7275] text-[#6c7275]"></span>
+      </h1>
 
       <img
         src={Img}
@@ -40,27 +37,51 @@ const SignIn = () => {
       />
       {/* right side */}
       <div className="flex flex-col items-center justify-center md:flex-grow">
-        <form className="flex w-full flex-col gap-8 px-8 py-10 md:h-1/2 md:w-1/2 md:px-0 md:py-0">
+        <form className="flex w-full flex-col gap-8 px-8 py-10 md:w-1/2 md:px-0 md:py-0">
           <h1 className="font-poppins text-[40px] font-medium leading-[1.1] tracking-[-0.4px] text-[#141718]">
-            Sign In
+            Sign Up
           </h1>
-          <p className="font-poppins -mt-2 text-[14px] text-[#6c7275]">
-            Dont have an account?{" "}
+          <p className="-mt-2 font-poppins text-[14px] text-[#6c7275]">
+            Already have an account?{" "}
             <a className="font-poppins text-[#38cb89] hover:underline" href="/">
-              Sign Up
+              Sign In
             </a>
           </p>
           <div className="flex flex-col items-center justify-center gap-8">
+            {/* Full Name */}
+            <div className="relative w-full">
+              <input
+                name="name"
+                type="text"
+                className="peer w-full border-b border-[#e8ecef] bg-inherit py-1 text-black/90 transition-colors focus:border-b-2 focus:border-[#38cb89] focus:bg-white focus:outline-none"
+              />
+              <label className="absolute left-0 top-1 cursor-text font-inter text-[16px] text-[#6c7275] transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-[#38cb89]">
+                Full Name
+              </label>
+            </div>
+            {/* Username */}
             <div className="relative w-full">
               <input
                 name="username"
                 type="text"
                 className="peer w-full border-b border-[#e8ecef] bg-inherit py-1 text-black/90 transition-colors focus:border-b-2 focus:border-[#38cb89] focus:bg-white focus:outline-none"
               />
-              <label className="font-inter absolute left-0 top-1 cursor-text text-[16px] text-[#6c7275] transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-[#38cb89]">
-                Username / Email
+              <label className="absolute left-0 top-1 cursor-text font-inter text-[16px] text-[#6c7275] transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-[#38cb89]">
+                Username
               </label>
             </div>
+            {/* Email */}
+            <div className="relative w-full">
+              <input
+                name="email"
+                type="email"
+                className="peer w-full border-b border-[#e8ecef] bg-inherit py-1 text-black/90 transition-colors focus:border-b-2 focus:border-[#38cb89] focus:bg-white focus:outline-none"
+              />
+              <label className="absolute left-0 top-1 cursor-text font-inter text-[16px] text-[#6c7275] transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-[#38cb89]">
+                Email Address
+              </label>
+            </div>
+            {/* Password */}
             <div className="relative w-full">
               <input
                 name="password"
@@ -70,7 +91,7 @@ const SignIn = () => {
                 onBlur={handleInputBlur} // Handle input blur
               />
               <label
-                className={`font-inter absolute left-0 top-1 cursor-text text-[16px] text-[#6c7275] transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-[#38cb89] ${
+                className={`absolute left-0 top-1 cursor-text font-inter text-[16px] text-[#6c7275] transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-[#38cb89] ${
                   isFocused || showPassword
                     ? "-top-4 text-xs text-[#38cb89]"
                     : "text-[#38cb89]"
@@ -97,21 +118,17 @@ const SignIn = () => {
               <input
                 type="checkbox"
                 name="checkbox"
-                className="h-5 w-5 text-yellow-100 accent-[#38cb89] "
+                className="h-5 w-5 text-yellow-100 accent-[#38cb89]"
               />
-              <span className="font-inter ml-2 text-[16px] text-[#6c7275]">
-                Remember me 
+              <span className="ml-2 font-inter text-[14px] text-[#6c7275]">
+                I agree with{" "}
+                <b className="font-bold text-[#141718]">Privacy Policy</b> &{" "}
+                <b className="font-bold text-[#141718]">Terms of Use</b>
               </span>
-              <a
-                href="/"
-                className="font-inter ml-9 text-base font-semibold leading-[1.63] text-[#141718] hover:text-[#38cb89] hover:underline"
-              >
-                Forgot password?
-              </a>
             </div>
           </div>
-          <button className="font-inter relative flex w-full transform items-center justify-center gap-8 rounded-lg bg-[#141718] py-2.5 font-medium leading-[1.63] text-white shadow-lg transition-transform hover:scale-105 hover:bg-[#38cb89]">
-            Sign In
+          <button className="relative flex w-full transform items-center justify-center gap-8 rounded-lg bg-[#141718] py-2.5 font-inter font-medium leading-[1.63] text-white shadow-lg transition-transform hover:scale-105 hover:bg-[#38cb89]">
+            Sign Up
           </button>
         </form>
       </div>
@@ -119,4 +136,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;

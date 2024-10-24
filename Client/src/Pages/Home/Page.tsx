@@ -8,11 +8,11 @@ import ArticleGrid from "../../components/ArticleGrid";
 import CallToAction from "../../components/CallToAction";
 import Footer from "../../components/Footer";
 import MainSection from "./Heading";
-import Practice from "../../components/practice";
+
 import bannerImage from "../../assets/Banner.png";
 // import Article from "../Cards/Article";
 
-const HomePage: React.FC = (): JSX.Element  => {
+const HomePage: React.FC = (): JSX.Element => {
   return (
     <React.Fragment>
       <Carousel />
@@ -46,7 +46,7 @@ const HomePage: React.FC = (): JSX.Element  => {
         <ArticleGrid articles={[]} />
       </section>
       <CallToAction />
-      <Practice />
+
       <Footer />
     </React.Fragment>
   );

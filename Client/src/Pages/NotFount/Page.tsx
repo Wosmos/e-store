@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { CiFaceMeh } from "react-icons/ci";
 
-const NotFound: React.FC = () => {
+const NotFound: React.FC = ():JSX.Element => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center px-4">
       <h1 className="text-heading-2 flex-center">
