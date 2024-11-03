@@ -3,7 +3,7 @@ import Img from "../../assets/Top.png";
 import { HiOutlineEye, HiOutlineEyeOff } from "react-icons/hi"; // Import icons from react-icons
 
 
-//color used #38cb89
+
 
 
 const SignUp = () => {
