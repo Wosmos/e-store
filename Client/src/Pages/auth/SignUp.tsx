@@ -1,9 +1,6 @@
 import { useState } from "react";
 import Img from "../../assets/Top.png";
-import { HiOutlineEye, HiOutlineEyeOff } from "react-icons/hi"; // Import icons from react-icons
-
-
-
+import { HiOutlineEye, HiOutlineEyeOff } from "react-icons/hi"; 
 
 
 const SignUp = () => {
